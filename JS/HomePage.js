@@ -2,7 +2,7 @@
 const recommendationMovies = document.querySelector("#recommendation-movies");
 //This function loads the recommendation movies and then create the movie cards
 function loadRecommendationMovies (){
-    fetch("Data/movies.xml")
+    fetch("Data/Movies.xml")
     .then(input => {
         if(!input.ok){
             throw new Error ("XML File not found! ");
@@ -50,7 +50,7 @@ function loadRecommendationMovies (){
 const featuredMovies = document.querySelector("#featured-movies");
 //This function loads the recommendation movies and then create the movie cards
 function loadFeaturedMovies (){
-    fetch("Data/movies.xml")
+    fetch("Data/Movies.xml")
     .then(input => {
         if(!input.ok){
             throw new Error ("XML File not found! ");
@@ -75,7 +75,7 @@ function loadFeaturedMovies (){
             featuredMovies.innerHTML += `
             <div class = "movie-card" data-genre = "${genre}">
                     <div class = "image-container">
-                        <img src = "${image}" alt = "${alt}}">
+                        <img src = "${image}" alt = "${alt}">
                     </div>
                     <div class = "movie-meta-data">
                         <div class="meta-row">
